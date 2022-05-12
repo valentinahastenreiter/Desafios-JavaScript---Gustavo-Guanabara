@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Ano Bissextp</title>
+  <style>
+    body {font: 13pt Arial;}
+    button {font: 13pt Arial; padding: 20px;}
+  </style>
+</head>
+<body>
+  <h1>Ano Bissexto</h1>
+  <button onclick="verificar()">Verificar</button>
+  <section id="saida">
+    
+  </section>
+  <script>
+    function verificar(){
+      let ano = Number(window.prompt("Digite o ano"))
+
+        if(ano % 4 == 0 && ano % 100 != 0  || ano % 400 === 0){
+          let saida = document.getElementById('saida')
+          saida.innerHTML = `<p>O ano de ${ano} <mark>É BISSEXTO💗</mark>`
+        }
+        else{
+          let saida = document.getElementById('saida')
+          saida.innerHTML = `<p>O ano de ${ano} <mark>NÃO É BISSEXTO🚫</mark>`
+        }
+
+    }
+  </script>
+</body>
+</html>
